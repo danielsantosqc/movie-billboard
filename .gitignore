@@ -139,5 +139,5 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
 
-#Secret (api_key)
-secrete.js
+#Secret.js (api_key)
+src/secret.js
