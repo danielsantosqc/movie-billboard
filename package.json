@@ -1,0 +1,19 @@
+{
+  "name": "movie-billboard",
+  "version": "1.0.0",
+  "description": "Application that lists movies using API-REST from \"TMDB\". / App que lista peliculas usando la API-REST de \"TMDB\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsantosqc/movie-billboard.git"
+  },
+  "author": "Daniel Santos <danielsantosqc.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielsantosqc/movie-billboard/issues"
+  },
+  "homepage": "https://github.com/danielsantosqc/movie-billboard#readme"
+}
