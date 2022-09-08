@@ -342,7 +342,7 @@ button {
   
 
 /* Footer */
-footer {
+.footer {
   background-color: var(--purple-medium-3);
   color: var(--purple-light-2);
   text-align: center;
@@ -350,6 +350,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer-img{
+  width: 50px;
 }
 
 
