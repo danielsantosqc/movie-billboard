@@ -173,6 +173,12 @@ button {
   border-bottom-right-radius: 8px;
 }
 
+/* main */
+
+.main {
+  min-height: calc(100vh - 50px - 40px);
+}
+
 
 /* Trending */
 .trendingPreview-header {
