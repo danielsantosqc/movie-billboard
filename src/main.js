@@ -1,14 +1,18 @@
-const ULR_API_TRENDING =
-  "https://api.themoviedb.org/3/trending/movie/day?api_key=" + API_KEY;
-const ULR_API_GENRES =
-  "https://api.themoviedb.org/3/genre/movie/list?api_key=" + API_KEY;
+const api = axios.create({
+  baseURL: "https://api.themoviedb.org/3/",
+  headers: {
+    "Content-Type": "application/json;charset=utf-8",
+  },
+  params: {
+    api_key: API_KEY,
+  },
+});
 
 async function getTrendingMoviesPreview() {
-  const res = await fetch(ULR_API_TRENDING);
-  const data = await res.json();
-  if ((res.status = 200)) {
-    console.log("Bien");
-    console.log(data);
+  const {res, data} = await api ("trending/movie/day");
+  if (status = 200) {
+    // console.log("Bien");
+    // console.log(data);
 
     const trendingPreviweMoviesContainer = document.querySelector(
       "#trendingPreview .trendingPreview-movieList"
@@ -34,25 +38,24 @@ async function getTrendingMoviesPreview() {
 }
 
 async function getGenresMoviesPreview() {
-  const res = await fetch(ULR_API_GENRES);
-  const data = await res.json();
-  if (res.status == 200) {
-    console.log("ok ");
-    console.log(data);
+  const {data, status} = await api('genre/movie/list');
+  if (status == 200) {
+    // console.log("ok ");
+    // console.log(data);
 
     const previewCategorieseContainer = document.querySelector(
       "#categoriesPreview .categoriesPreview-list"
     );
-    
+
     data.genres.forEach((genre) => {
-      
       const categoryContainer = document.createElement("div");
-      categoryContainer.classList.add("category-container")
+      categoryContainer.classList.add("category-container");
 
       const categoryTitle = document.createElement("h3");
-      categoryTitle.classList.add("category-title")
-      categoryTitle.setAttribute("id", "id"+genre.id);
+      categoryTitle.classList.add("category-title");
+      categoryTitle.setAttribute("id", "id" + genre.id);
       categoryTitle.textContent = genre.name;
+
       categoryContainer.appendChild(categoryTitle);
       previewCategorieseContainer.appendChild(categoryContainer);
     });
@@ -60,6 +63,3 @@ async function getGenresMoviesPreview() {
     console.log("algo salio mal");
   }
 }
-
-getTrendingMoviesPreview();
-getGenresMoviesPreview();
