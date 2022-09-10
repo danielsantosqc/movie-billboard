@@ -16,20 +16,22 @@
 </head>
 
 <body>
+
+  <!-- const  headerSection = -->
   <header id="header" class="header-container">
     <span class="header-arrow inactive">&lt;</span>
     <h1 class="header-title">MovieBillboard</h1>
     <h1 class="header-title header-title--categoryView inactive">Acción</h1>
 
     <form id="searchForm" class="header-searchForm">
-      <input type="text" placeholder="Vengadores" />
-      <button>🔍</button>
+      <input type="text" placeholder="Search....." />
+      <button id="searchBtn">🔍</button>
     </form>
   </header>
 
   <main class="main">
-    Content
 
+    <!-- const trendingPreviewSection = -->
     <section id="trendingPreview" class="trendingPreview-container">
       <div class="trendingPreview-header">
         <h2 class="trendingPreview-title">Tendencias</h2>
@@ -47,6 +49,7 @@
       </article>
     </section>
 
+    <!-- const categoriesPreviewSection =  -->
     <section id="categoriesPreview" class="categoriesPreview-container">
       <h2 class="categoriesPreview-title">Categorías</h2>
 
@@ -59,6 +62,7 @@
       </article>
     </section>
 
+    <!-- const genericListSection = -->
     <section id="genericList" class="genericList-container inactive">
       <div class="movie-container">
         <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
@@ -76,6 +80,8 @@
       </div>
     </section>
 
+
+    <!-- const movieDetailSection =  -->
     <section id="movieDetail" class="movieDetail-container inactive">
       <h1 class="movieDetail-title">Deadpool</h1>
       <span class="movieDetail-score">7.6</span>
@@ -128,6 +134,7 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./src/secret.js"></script>
+  <script src="./src/nodes.js"></script>
   <script src="./src/main.js"></script>
   <script src="./src/navigation.js"></script>
 </body>
