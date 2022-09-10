@@ -9,14 +9,11 @@ const api = axios.create({
 });
 
 async function getTrendingMoviesPreview() {
-  const {res, data} = await api ("trending/movie/day");
-  if (status = 200) {
+  const { status, data } = await api("trending/movie/day");
+  if (status == 200) {
     // console.log("Bien");
     // console.log(data);
-
-    const trendingPreviweMoviesContainer = document.querySelector(
-      "#trendingPreview .trendingPreview-movieList"
-    );
+    trendingMoviesPreviewList.innerHTML = "";
 
     data.results.forEach((movie) => {
       const movieContainer = document.createElement("div");
@@ -30,7 +27,7 @@ async function getTrendingMoviesPreview() {
         "https://image.tmdb.org/t/p/w300" + movie.poster_path
       );
       movieContainer.appendChild(movieImg);
-      trendingPreviweMoviesContainer.appendChild(movieContainer);
+      trendingMoviesPreviewList.appendChild(movieContainer);
     });
   } else {
     console.log("error");
@@ -38,14 +35,11 @@ async function getTrendingMoviesPreview() {
 }
 
 async function getGenresMoviesPreview() {
-  const {data, status} = await api('genre/movie/list');
+  const { data, status } = await api("genre/movie/list");
   if (status == 200) {
     // console.log("ok ");
     // console.log(data);
-
-    const previewCategorieseContainer = document.querySelector(
-      "#categoriesPreview .categoriesPreview-list"
-    );
+    categoriesPreviewList.innerHTML = "";
 
     data.genres.forEach((genre) => {
       const categoryContainer = document.createElement("div");
@@ -54,10 +48,11 @@ async function getGenresMoviesPreview() {
       const categoryTitle = document.createElement("h3");
       categoryTitle.classList.add("category-title");
       categoryTitle.setAttribute("id", "id" + genre.id);
-      categoryTitle.textContent = genre.name;
-
+      const categoryTitleText = document.createTextNode(genre.name);
+      
+      categoryTitle.appendChild(categoryTitleText)
       categoryContainer.appendChild(categoryTitle);
-      previewCategorieseContainer.appendChild(categoryContainer);
+      categoriesPreviewList.appendChild(categoryContainer);
     });
   } else {
     console.log("algo salio mal");
