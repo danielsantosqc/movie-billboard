@@ -15,6 +15,7 @@ const categoriesPreviewList = $('.categoriesPreview-list');//Lists & Containers
 
 //generic-section
 const genericListSection = $('#genericList');
+
 const movieDetailCategoriesList = $('#movieDetail .categories-list');//Lists & Containers
 
 
