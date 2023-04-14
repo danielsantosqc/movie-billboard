@@ -12,6 +12,10 @@ const trendingMoviesPreviewList = $('.trendingPreview-movieList');//Lists & Cont
 const categoriesPreviewSection = $('#categoriesPreview');
 const categoriesPreviewList = $('.categoriesPreview-list');//Lists & Containers
 
+//liked-section
+const likedMoviesSection = $('#liked');
+const likedMoviesListArticle = $('.liked-movieList');//Lists & Containers
+
 
 //generic-section
 const genericListSection = $('#genericList');
