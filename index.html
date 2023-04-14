@@ -20,11 +20,11 @@
   <!-- const  headerSection = -->
   <header id="header" class="header-container">
     <span class="header-arrow inactive">&lt;</span>
-    <h1 class="header-title">MovieBillboard</h1>
+    <h1 class="header-title">MovieBillboard 🎦🍿</h1>
     <h1 class="header-title header-title--categoryView inactive">Acción</h1>
 
     <form id="searchForm" class="header-searchForm">
-      <input type="text" placeholder="Buscar...." required/>
+      <input type="text" placeholder="Buscar...." required />
       <button id="searchBtn">🔍</button>
     </form>
   </header>
@@ -39,8 +39,11 @@
       </div>
 
       <article class="trendingPreview-movieList">
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
         <!-- aqui se pinta la lista de videos en Tendencias ------------->
-          <!-- <div class="movie-container">
+        <!-- <div class="movie-container">
             <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
               alt="Nombre de la película" />
           </div> -->
@@ -55,7 +58,7 @@
 
       <article class="categoriesPreview-list">
         <!-- -------aqui se pintan las categorias de las peliculas------ -->
-          <!-- <div class="category-container">
+        <!-- <div class="category-container">
               <h3 id="id28" class="category-title">Romance</h3>
             </div> -->
         <!-- ------------- -->
@@ -64,6 +67,9 @@
 
     <!-- const genericListSection = -->
     <section id="genericList" class="genericList-container inactive">
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
       <!-- aqui se pintan los movies relatedMovies -->
       <!-- <div class="movie-container">
         <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
@@ -71,6 +77,26 @@
       </div> -->
     </section>
 
+    <!-- const likedSection =  -->
+    <section id="liked" class="liked-container inactive">
+      <div class="liked-header">
+        <h2 class="liked-title">Películas favoritas</h2>
+      </div>
+      <article class="liked-movieList">
+        <!-- <div class="movie-container">
+          <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
+            alt="Nombre de la película" />
+        </div>
+        <div class="movie-container">
+          <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
+            alt="Nombre de la película" />
+        </div>
+        <div class="movie-container">
+          <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
+            alt="Nombre de la película" />
+        </div> -->
+      </article>
+    </section>
 
     <!-- const movieDetailSection =  -->
     <section id="movieDetail" class="movieDetail-container inactive">
@@ -98,12 +124,15 @@
         <h2 class="relatedMovies-title">Películas similares</h2>
 
         <div class="relatedMovies-scrollContainer">
-          <!-- aqui se pintan las cards de peliculas similares recomendadas -->
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+          <!-- aqui se pintan las cards de películas similares recomendadas -->
           <!-- <div class="movie-container">
             <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="movie-img"
               alt="Nombre de la película" />
           </div> -->
-         
+
         </div>
       </article>
     </section>
@@ -115,9 +144,11 @@
         src="./styles/github.png" alt="" srcset="">
     </a>
     <a href="https://developers.themoviedb.org/3/movies/get-movie-details"></a>
-    <a class="footer-link" href="https://developers.themoviedb.org/3/getting-started/introduction"> <img class="footer-img"
-      src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="" srcset="">
-  </a>
+    <a class="footer-link" href="https://developers.themoviedb.org/3/getting-started/introduction"> <img
+        class="footer-img"
+        src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+        alt="" srcset="">
+    </a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./src/secret.js"></script>
