@@ -7,5 +7,11 @@ Tecnologias usadas.
 - JavaScript. HTML. CSS.
 - Axios (Librería)
 - [TMDB (API)](https://www.themoviedb.org/)
+#
+Features.
+- Lista películas en tendencia
+- Listar películas por categoria
+- Area de búsqueda de películas por nombre o titulo
+- Tambien puedes agregar películas como favoritos,
 
 ![](styles/moviebillboard.gif)
