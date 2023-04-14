@@ -16,18 +16,20 @@ function likedMoviesList() {
 }
 
 function likeMovie(movie) {
-  console.log(movie)
+  // console.log(movie)
   const likedMovies = likedMoviesList()
   if (likedMovies[movie.id]) {
-    console.log('ya estaba, y lo borramos')
+    // console.log('ya estaba, y lo borramos')
+    console.log(`${movie.title} --> disliked 💔`)
     delete likedMovies[movie.id] // delete id and value from object
   } else {
     likedMovies[movie.id] = movie // add id and value to object
-    console.log('no estaba, y lo agregamos')
+    // console.log('no estaba, y lo agregamos')
+    console.log(`${movie.title} --> liked 💚`)
   }
   localStorage.setItem('liked_movies', JSON.stringify(likedMovies))
 
-  console.log(JSON.parse(localStorage.getItem('liked_movies'))) // localStorage data
+  // console.log(JSON.parse(localStorage.getItem('liked_movies'))) // localStorage data
 }
 
 // utils and render ++++++++++++++++
@@ -38,7 +40,7 @@ const lazyLoader = new IntersectionObserver((entries) => {
       const url = entry.target.getAttribute('data-src')
       entry.target.setAttribute('src', url)
       lazyLoader.unobserve(entry.target)
-      console.log(entry.target.getAttribute('alt') + '  --> Cargada') // movie title --> Loaded
+      console.log(entry.target.getAttribute('alt') + ' --> Imagen cargada') // movie title --> Loaded
     }
   })
 })
@@ -80,7 +82,6 @@ function createMovies(
       const likedMovies = likedMoviesList()
       if (likedMovies[movie.id]) {
         movieButton.classList.add('movie-button--liked')
-        console.log('verde!!!')
       }
       movieButton.classList.add('movie-button')
       movieButton.addEventListener('click', (e) => {
@@ -171,7 +172,7 @@ async function getTrendingMovies() {
     // console.log(data);
     const movies = data.results
     // genericListSection.classList.remove('inactive')
-    createMovies(movies, genericListSection, { lazyLoad: true, clear: false })
+    createMovies(movies, genericListSection, { lazyLoad: true, clear: true })
     // add new element button html to the createMovies.
     const buttonMore = document.createElement('button')
     buttonMore.textContent = 'More...'
